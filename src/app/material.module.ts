@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-//import { BrowserAnimationsModule,NoopAnimationsModule } from '@angular/platform-browser/animations';
+//import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { 
         MatButtonModule,
         MatCheckboxModule,

@@ -1,5 +1,12 @@
-import { Component, OnInit } from '@angular/core';
-
+import { Component, OnInit, HostBinding } from '@angular/core';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition,
+  // ...
+} from '@angular/animations';
 
 
 export interface PeriodicElement {
@@ -11,6 +18,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {name: 'Lẩu Vịt To', price: '250.000 VND'},
   {name: 'Lẩu Vịt Nhỏ', price: '190.000 VND'},
   {name: 'Vịt Chiên Mắm', price: '100.000 VND'},
+  {name: 'Vịt Men 117', price: '200.000 VND'},
   {name: 'Vịt Áp Chảo', price: '100.000 VND'},
   {name: 'Vịt Rang Muối', price: '110.000 VND'},
   {name: 'Gỏi Vịt', price: '110.000 VND'},
@@ -25,7 +33,7 @@ const ELEMENT_DATA: PeriodicElement[] = [
   {name: 'Vịt Hầm Ngải Cứu', price: '100.000 VND'},
   {name: 'Chân Vịt Hầm Ngải Cứu', price: '90.000 VND'},
   {name: 'Xáo Vịt', price: '45.000 VND'},
-  {name: 'Cơm Rang Đĩa To', price: '90.000 VND'},
+  {name: 'Cơm Rang Đĩa To', price: '80.000 VND'},
   {name: 'Cơm Rang Đĩa Nhỏ', price: '50.000 VND'},
   {name: 'Miến Xào Đĩa To', price: '80.000 VND'},
   {name: 'Miến Xào Đĩa Nhỏ', price: '50.000 VND'},
@@ -38,11 +46,18 @@ const ELEMENT_DATA: PeriodicElement[] = [
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
-  styleUrls: ['./content.component.css']
+  styleUrls: ['./content.component.css'],
+  animations: [
+    // animation triggers go here
+  ]
 })
 
 
 export class ContentComponent {
   displayedColumns: string[] = ['name', 'price'];
   dataSource = ELEMENT_DATA;
+
+  
 }
+
+
